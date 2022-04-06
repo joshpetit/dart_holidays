@@ -21,6 +21,14 @@ class Order {
   const Order(this.ordinal);
 
   final int ordinal;
+
+  Day sunday() => Day(ordinal, 0);
+  Day monday() => Day(ordinal, 1);
+  Day tuesday() => Day(ordinal, 2);
+  Day wednesday() => Day(ordinal, 3);
+  Day thursday() => Day(ordinal, 4);
+  Day friday() => Day(ordinal, 5);
+  Day saturday() => Day(ordinal, 6);
 }
 
 class Day {
@@ -29,3 +37,5 @@ class Day {
   final int ordinal;
   final int day;
 }
+
+class Month {}
