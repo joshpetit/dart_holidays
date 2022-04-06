@@ -1,10 +1,10 @@
-/// Generates dates
+/// Generates new date objects.
 class Generator {
-  Order first() => Order(1);
-  Order second() => Order(2);
-  Order third() => Order(3);
-  Order fourth() => Order(4);
-  Order last() => Order(5);
+  Order get first => Order(1);
+  Order get second => Order(2);
+  Order get third => Order(3);
+  Order get fourth => Order(4);
+  Order get last => Order(5);
 
   /// Equivalent of doing [first], [second], [third], [fourth], and [last].
   /// 5 is equsl to last
@@ -17,13 +17,13 @@ class Order {
 
   final int ordinal;
 
-  Day sunday() => Day(ordinal, 1);
-  Day monday() => Day(ordinal, 2);
-  Day tuesday() => Day(ordinal, 3);
-  Day wednesday() => Day(ordinal, 4);
-  Day thursday() => Day(ordinal, 5);
-  Day friday() => Day(ordinal, 6);
-  Day saturday() => Day(ordinal, 7);
+  Day get sunday => Day(ordinal, 1);
+  Day get monday => Day(ordinal, 2);
+  Day get tuesday => Day(ordinal, 3);
+  Day get wednesday => Day(ordinal, 4);
+  Day get thursday => Day(ordinal, 5);
+  Day get friday => Day(ordinal, 6);
+  Day get saturday => Day(ordinal, 7);
 }
 
 class Day {
@@ -34,18 +34,18 @@ class Day {
 
   Month month(int monthNumber) => Month(ordinal, day, monthNumber.clamp(1, 12));
 
-  Month january() => month(1);
-  Month february() => month(2);
-  Month march() => month(3);
-  Month april() => month(4);
-  Month may() => month(5);
-  Month june() => month(6);
-  Month july() => month(7);
-  Month august() => month(8);
-  Month september() => month(9);
-  Month october() => month(10);
-  Month november() => month(11);
-  Month december() => month(12);
+  Month get january => month(1);
+  Month get february => month(2);
+  Month get march => month(3);
+  Month get april => month(4);
+  Month get may => month(5);
+  Month get june => month(6);
+  Month get july => month(7);
+  Month get august => month(8);
+  Month get september => month(9);
+  Month get october => month(10);
+  Month get november => month(11);
+  Month get december => month(12);
 }
 
 class Month {
