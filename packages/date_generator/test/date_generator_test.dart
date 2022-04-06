@@ -1,6 +1,5 @@
 import 'package:date_generator/date_generator.dart';
 import 'package:test/test.dart';
-// TODO(joshpetit): Add tests for edge cases such as ordinals > 5 entered.
 
 void main() {
   final gen = Generator();
