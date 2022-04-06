@@ -173,6 +173,7 @@ void main() {
       order = gen.second();
       day = order.monday();
       month = day.february();
+      gen.second().sunday().may();
       expect(month.ordinal, equals(2));
       expect(month.day, equals(1));
       expect(month.month, equals(1));
@@ -268,15 +269,6 @@ void main() {
       expect(month.month, equals(11));
     });
 
-    test('should have month 5 in(5)', () {
-      order = gen.second();
-      day = order.thursday();
-      month = day.inside(5);
-      expect(month.ordinal, equals(2));
-      expect(month.day, equals(4));
-      expect(month.month, equals(5));
-    });
-
     test('should allow month(#)', () {
       order = gen.second();
       day = order.thursday();
@@ -285,6 +277,5 @@ void main() {
       expect(month.day, equals(4));
       expect(month.month, equals(5));
     });
-
   });
 }
