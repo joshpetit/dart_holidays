@@ -1,5 +1,6 @@
 import 'package:date_generator/date_generator.dart';
 import 'package:test/test.dart';
+// TODO(joshpetit): Add tests for edge cases such as ordinals > 5 entered.
 
 void main() {
   final gen = Generator();
@@ -166,7 +167,7 @@ void main() {
       month = day.january();
       expect(month.ordinal, equals(1));
       expect(month.day, equals(0));
-      expect(month.month, equals(0));
+      expect(month.month, equals(1));
     });
 
     test('should have month 1 for february', () {
@@ -176,7 +177,7 @@ void main() {
       gen.second().sunday().may();
       expect(month.ordinal, equals(2));
       expect(month.day, equals(1));
-      expect(month.month, equals(1));
+      expect(month.month, equals(2));
     });
 
     test('should have month 2 for march', () {
@@ -185,7 +186,7 @@ void main() {
       month = day.march();
       expect(month.ordinal, equals(3));
       expect(month.day, equals(2));
-      expect(month.month, equals(2));
+      expect(month.month, equals(3));
     });
 
     test('should have month 3 for april', () {
@@ -194,7 +195,7 @@ void main() {
       month = day.april();
       expect(month.ordinal, equals(4));
       expect(month.day, equals(3));
-      expect(month.month, equals(3));
+      expect(month.month, equals(4));
     });
 
     test('should have month 4 for may', () {
@@ -203,7 +204,7 @@ void main() {
       month = day.may();
       expect(month.ordinal, equals(5));
       expect(month.day, equals(4));
-      expect(month.month, equals(4));
+      expect(month.month, equals(5));
     });
 
     test('should have month 5 for june', () {
@@ -212,7 +213,7 @@ void main() {
       month = day.june();
       expect(month.ordinal, equals(1));
       expect(month.day, equals(5));
-      expect(month.month, equals(5));
+      expect(month.month, equals(6));
     });
 
     test('should have month 6 for july', () {
@@ -221,7 +222,7 @@ void main() {
       month = day.july();
       expect(month.ordinal, equals(2));
       expect(month.day, equals(6));
-      expect(month.month, equals(6));
+      expect(month.month, equals(7));
     });
 
     test('should have month 7 for august', () {
@@ -230,16 +231,17 @@ void main() {
       month = day.august();
       expect(month.ordinal, equals(3));
       expect(month.day, equals(0));
-      expect(month.month, equals(7));
+      expect(month.month, equals(8));
     });
 
     test('should have month 8 for september', () {
       order = gen.fourth();
       day = order.monday();
       month = day.september();
+      gen.sunday(4).may();
       expect(month.ordinal, equals(4));
       expect(month.day, equals(1));
-      expect(month.month, equals(8));
+      expect(month.month, equals(9));
     });
 
     test('should have month 9 for october', () {
@@ -248,7 +250,7 @@ void main() {
       month = day.october();
       expect(month.ordinal, equals(5));
       expect(month.day, equals(2));
-      expect(month.month, equals(9));
+      expect(month.month, equals(10));
     });
 
     test('should have month 10 for november', () {
@@ -257,7 +259,7 @@ void main() {
       month = day.november();
       expect(month.ordinal, equals(1));
       expect(month.day, equals(3));
-      expect(month.month, equals(10));
+      expect(month.month, equals(11));
     });
 
     test('should have month 11 for december', () {
@@ -266,7 +268,7 @@ void main() {
       month = day.december();
       expect(month.ordinal, equals(2));
       expect(month.day, equals(4));
-      expect(month.month, equals(11));
+      expect(month.month, equals(12));
     });
 
     test('should allow month(#)', () {
@@ -277,5 +279,99 @@ void main() {
       expect(month.day, equals(4));
       expect(month.month, equals(5));
     });
+  });
+
+  group('year', () {
+    Order order;
+    Day day;
+    Month month;
+    DateTime date;
+    test('should have first thursday in january of 2016', () {
+      order = gen.first();
+      day = order.thursday();
+      month = day.january();
+      date = month.of(2016);
+      expect(month.ordinal, equals(1));
+      expect(month.day, equals(4));
+      expect(month.month, equals(1));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(7));
+    });
+    test('should have second thursday in january of 2016', () {
+      order = gen.second();
+      day = order.thursday();
+      month = day.january();
+      date = month.of(2016);
+      expect(month.ordinal, equals(2));
+      expect(month.day, equals(4));
+      expect(month.month, equals(1));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(14));
+    });
+    test('should have third thursday in january of 2016', () {
+      order = gen.third();
+      day = order.thursday();
+      month = day.january();
+      date = month.of(2016);
+      expect(month.ordinal, equals(3));
+      expect(month.day, equals(4));
+      expect(month.month, equals(1));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(21));
+    });
+    test('should have fourth thursday in january of 2016', () {
+      order = gen.fourth();
+      day = order.thursday();
+      month = day.january();
+      date = month.of(2016);
+      expect(month.ordinal, equals(4));
+      expect(month.day, equals(4));
+      expect(month.month, equals(1));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(28));
+    });
+    test('should have last thursday in january of 2016', () {
+      order = gen.last();
+      day = order.thursday();
+      month = day.january();
+      date = month.of(2016);
+      expect(month.ordinal, equals(5));
+      expect(month.day, equals(4));
+      expect(month.month, equals(1));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(28));
+    });
+
+    test('should have year 2016 for january(2016)', () {
+      order = gen.second();
+      day = order.thursday();
+      date = day.january().of(2016);
+
+      expect(day.ordinal, equals(2));
+      expect(day.ordinal, equals(2));
+      expect(day.day, equals(4));
+
+      expect(date.year, equals(2016));
+      expect(date.month, equals(1));
+      expect(date.day, equals(14));
+    });
+
+    /* test('should allow in()', () { */
+    /*   date = gen.first().wednesday().inside().january().of(2018); */
+    /**/
+    /*   expect(date.year, equals(2018)); */
+    /*   expect(date.month, equals(1)); */
+    /*   expect(date.day, equals(3)); */
+    /* }, skip: true); */
   });
 }

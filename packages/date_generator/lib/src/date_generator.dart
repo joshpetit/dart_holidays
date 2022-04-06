@@ -39,18 +39,18 @@ class Day {
 
   Month month(int monthNumber) => Month(ordinal, day, monthNumber);
 
-  Month january() => month(0);
-  Month february() => month(1);
-  Month march() => month(2);
-  Month april() => month(3);
-  Month may() => month(4);
-  Month june() => month(5);
-  Month july() => month(6);
-  Month august() => month(7);
-  Month september() => month(8);
-  Month october() => month(9);
-  Month november() => month(10);
-  Month december() => month(11);
+  Month january() => month(1);
+  Month february() => month(2);
+  Month march() => month(3);
+  Month april() => month(4);
+  Month may() => month(5);
+  Month june() => month(6);
+  Month july() => month(7);
+  Month august() => month(8);
+  Month september() => month(9);
+  Month october() => month(10);
+  Month november() => month(11);
+  Month december() => month(12);
 }
 
 class Month {
@@ -66,15 +66,14 @@ class Month {
 
   DateTime of(int year) {
     var date = DateTime(year, month, 1);
-
-    var days = day - date.day;
+    var days = day - date.weekday;
     if (days < 0) {
       days = 7 + days;
     }
-    date = DateTime(year, month, 1 + days + ((ordinal - 1) * 7));
+    date = DateTime(date.year, date.month, 1 + days + ((ordinal - 1) * 7));
 
     if (date.month != month) {
-      date = DateTime(year, month, date.day - 7);
+      date = DateTime(date.year, date.month, date.day - 7);
     }
     return date;
   }
