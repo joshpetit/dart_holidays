@@ -28,7 +28,7 @@ void main() {
 
   group('Days created correctly', () {
     final gen = Generator();
-    var day;
+    Day day;
     test('That sunday created correctly', () {
       day = gen.sunday();
       expect(day.ordinal, equals(1));
@@ -60,7 +60,7 @@ void main() {
       expect(day.day, equals(5));
     });
     test('That saturday created correctly', () {
-      day = gen.friday();
+      day = gen.saturday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(6));
     });
@@ -96,7 +96,7 @@ void main() {
       expect(day.day, equals(5));
     });
     test('That saturday created with correct ordinal', () {
-      day = gen.friday(2);
+      day = gen.saturday(2);
       expect(day.ordinal, equals(2));
       expect(day.day, equals(6));
     });
