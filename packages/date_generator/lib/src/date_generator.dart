@@ -27,12 +27,12 @@ class Order {
 }
 
 class Day {
-  const Day(this.ordinal, this.day);
+  const Day(this.ordinal, this.weekday);
 
   final int ordinal;
-  final int day;
+  final int weekday;
 
-  Month month(int monthNumber) => Month(ordinal, day, monthNumber.clamp(1, 12));
+  Month month(int monthNumber) => Month(ordinal, weekday, monthNumber.clamp(1, 12));
 
   Month get january => month(1);
   Month get february => month(2);
@@ -51,17 +51,17 @@ class Day {
 class Month {
   const Month(
     this.ordinal,
-    this.day,
+    this.weekday,
     this.month,
   );
 
-  final int day;
+  final int weekday;
   final int ordinal;
   final int month;
 
   DateTime of(int year) {
     var date = DateTime(year, month, 1);
-    var days = day - date.weekday;
+    var days = weekday - date.weekday;
     if (days < 1) {
       days = 7 + days;
     }
