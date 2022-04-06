@@ -8,13 +8,7 @@ class Generator {
   Order fourth() => Order(4);
   Order last() => Order(5);
 
-  Day sunday([int ordinal = 1]) => Day(ordinal, 0);
-  Day monday([int ordinal = 1]) => Day(ordinal, 1);
-  Day tuesday([int ordinal = 1]) => Day(ordinal, 2);
-  Day wednesday([int ordinal = 1]) => Day(ordinal, 3);
-  Day thursday([int ordinal = 1]) => Day(ordinal, 4);
-  Day friday([int ordinal = 1]) => Day(ordinal, 5);
-  Day saturday([int ordinal = 1]) => Day(ordinal, 6);
+  Order week(int weekNumber) => Order(weekNumber.clamp(1, 5));
 }
 
 class Order {
@@ -37,7 +31,7 @@ class Day {
   final int ordinal;
   final int day;
 
-  Month month(int monthNumber) => Month(ordinal, day, monthNumber);
+  Month month(int monthNumber) => Month(ordinal, day, monthNumber.clamp(1, 12));
 
   Month january() => month(1);
   Month february() => month(2);

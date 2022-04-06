@@ -24,79 +24,91 @@ void main() {
     test('Last ordial correct', () {
       expect(gen.last().ordinal, equals(5));
     });
+
+    test('should create based on week correctly', () {
+      expect(gen.week(2).ordinal, equals(2));
+    });
+
+    test('should clamp when greater than 5', () {
+      expect(gen.week(6).ordinal, equals(5));
+    });
+
+    test('should clamp when less than 1', () {
+      expect(gen.week(0).ordinal, equals(1));
+    });
   });
 
   group('Days created correctly', () {
     final gen = Generator();
     Day day;
     test('That sunday created correctly', () {
-      day = gen.sunday();
+      day = gen.first().sunday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(0));
     });
     test('That monday created correctly', () {
-      day = gen.monday();
+      day = gen.first().monday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(1));
     });
     test('That tuesday created correctly', () {
-      day = gen.tuesday();
+      day = gen.first().tuesday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(2));
     });
     test('That wednesday created correctly', () {
-      day = gen.wednesday();
+      day = gen.first().wednesday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(3));
     });
     test('That thursday created correctly', () {
-      day = gen.thursday();
+      day = gen.first().thursday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(4));
     });
     test('That friday created correctly', () {
-      day = gen.friday();
+      day = gen.first().friday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(5));
     });
     test('That saturday created correctly', () {
-      day = gen.saturday();
+      day = gen.first().saturday();
       expect(day.ordinal, equals(1));
       expect(day.day, equals(6));
     });
 
     test('That sunday created with correct ordinal', () {
-      day = gen.sunday(2);
+      day = gen.second().sunday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(0));
     });
     test('That monday created with correct ordinal', () {
-      day = gen.monday(2);
+      day = gen.second().monday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(1));
     });
     test('That tuesday created with correct ordinal', () {
-      day = gen.tuesday(2);
+      day = gen.second().tuesday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(2));
     });
     test('That wednesday created with correct ordinal', () {
-      day = gen.wednesday(2);
+      day = gen.second().wednesday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(3));
     });
     test('That thursday created with correct ordinal', () {
-      day = gen.thursday(2);
+      day = gen.second().thursday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(4));
     });
     test('That friday created with correct ordinal', () {
-      day = gen.friday(2);
+      day = gen.second().friday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(5));
     });
     test('That saturday created with correct ordinal', () {
-      day = gen.saturday(2);
+      day = gen.second().saturday();
       expect(day.ordinal, equals(2));
       expect(day.day, equals(6));
     });
@@ -238,7 +250,7 @@ void main() {
       order = gen.fourth();
       day = order.monday();
       month = day.september();
-      gen.sunday(4).may();
+      gen.fourth().sunday().may();
       expect(month.ordinal, equals(4));
       expect(month.day, equals(1));
       expect(month.month, equals(9));
