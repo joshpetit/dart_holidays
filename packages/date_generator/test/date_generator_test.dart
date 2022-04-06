@@ -44,73 +44,73 @@ void main() {
     test('That sunday created correctly', () {
       day = gen.first().sunday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(0));
+      expect(day.day, equals(1));
     });
     test('That monday created correctly', () {
       day = gen.first().monday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(1));
+      expect(day.day, equals(2));
     });
     test('That tuesday created correctly', () {
       day = gen.first().tuesday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(2));
+      expect(day.day, equals(3));
     });
     test('That wednesday created correctly', () {
       day = gen.first().wednesday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(3));
+      expect(day.day, equals(4));
     });
     test('That thursday created correctly', () {
       day = gen.first().thursday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(4));
+      expect(day.day, equals(5));
     });
     test('That friday created correctly', () {
       day = gen.first().friday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(5));
+      expect(day.day, equals(6));
     });
     test('That saturday created correctly', () {
       day = gen.first().saturday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(6));
+      expect(day.day, equals(7));
     });
 
     test('That sunday created with correct ordinal', () {
       day = gen.second().sunday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(0));
+      expect(day.day, equals(1));
     });
     test('That monday created with correct ordinal', () {
       day = gen.second().monday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(1));
+      expect(day.day, equals(2));
     });
     test('That tuesday created with correct ordinal', () {
       day = gen.second().tuesday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(2));
+      expect(day.day, equals(3));
     });
     test('That wednesday created with correct ordinal', () {
       day = gen.second().wednesday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(3));
+      expect(day.day, equals(4));
     });
     test('That thursday created with correct ordinal', () {
       day = gen.second().thursday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(4));
+      expect(day.day, equals(5));
     });
     test('That friday created with correct ordinal', () {
       day = gen.second().friday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(5));
+      expect(day.day, equals(6));
     });
     test('That saturday created with correct ordinal', () {
       day = gen.second().saturday();
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(6));
+      expect(day.day, equals(7));
     });
   });
 
@@ -121,50 +121,50 @@ void main() {
       order = gen.first();
       day = order.sunday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(0));
+      expect(day.day, equals(1));
     });
 
     test('That sunday created correctly', () {
       order = gen.first();
       day = order.sunday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(0));
+      expect(day.day, equals(1));
     });
     test('That monday created correctly', () {
       order = gen.first();
       day = order.monday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(1));
+      expect(day.day, equals(2));
     });
     test('That tuesday created correctly', () {
       order = gen.first();
       day = order.tuesday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(2));
+      expect(day.day, equals(3));
     });
     test('That wednesday created correctly', () {
       order = gen.first();
       day = order.wednesday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(3));
+      expect(day.day, equals(4));
     });
     test('That thursday created correctly', () {
       order = gen.first();
       day = order.thursday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(4));
+      expect(day.day, equals(5));
     });
     test('That friday created correctly', () {
       order = gen.first();
       day = order.friday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(5));
+      expect(day.day, equals(6));
     });
     test('That saturday created correctly', () {
       order = gen.first();
       day = order.saturday();
       expect(day.ordinal, equals(1));
-      expect(day.day, equals(6));
+      expect(day.day, equals(7));
     });
   });
 
@@ -178,7 +178,7 @@ void main() {
       day = order.sunday();
       month = day.january();
       expect(month.ordinal, equals(1));
-      expect(month.day, equals(0));
+      expect(month.day, equals(1));
       expect(month.month, equals(1));
     });
 
@@ -188,7 +188,7 @@ void main() {
       month = day.february();
       gen.second().sunday().may();
       expect(month.ordinal, equals(2));
-      expect(month.day, equals(1));
+      expect(month.day, equals(2));
       expect(month.month, equals(2));
     });
 
@@ -197,7 +197,7 @@ void main() {
       day = order.tuesday();
       month = day.march();
       expect(month.ordinal, equals(3));
-      expect(month.day, equals(2));
+      expect(month.day, equals(3));
       expect(month.month, equals(3));
     });
 
@@ -206,7 +206,7 @@ void main() {
       day = order.wednesday();
       month = day.april();
       expect(month.ordinal, equals(4));
-      expect(month.day, equals(3));
+      expect(month.day, equals(4));
       expect(month.month, equals(4));
     });
 
@@ -215,7 +215,7 @@ void main() {
       day = order.thursday();
       month = day.may();
       expect(month.ordinal, equals(5));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(5));
     });
 
@@ -224,7 +224,7 @@ void main() {
       day = order.friday();
       month = day.june();
       expect(month.ordinal, equals(1));
-      expect(month.day, equals(5));
+      expect(month.day, equals(6));
       expect(month.month, equals(6));
     });
 
@@ -233,7 +233,7 @@ void main() {
       day = order.saturday();
       month = day.july();
       expect(month.ordinal, equals(2));
-      expect(month.day, equals(6));
+      expect(month.day, equals(7));
       expect(month.month, equals(7));
     });
 
@@ -242,7 +242,7 @@ void main() {
       day = order.sunday();
       month = day.august();
       expect(month.ordinal, equals(3));
-      expect(month.day, equals(0));
+      expect(month.day, equals(1));
       expect(month.month, equals(8));
     });
 
@@ -252,7 +252,7 @@ void main() {
       month = day.september();
       gen.fourth().sunday().may();
       expect(month.ordinal, equals(4));
-      expect(month.day, equals(1));
+      expect(month.day, equals(2));
       expect(month.month, equals(9));
     });
 
@@ -261,7 +261,7 @@ void main() {
       day = order.tuesday();
       month = day.october();
       expect(month.ordinal, equals(5));
-      expect(month.day, equals(2));
+      expect(month.day, equals(3));
       expect(month.month, equals(10));
     });
 
@@ -270,7 +270,7 @@ void main() {
       day = order.wednesday();
       month = day.november();
       expect(month.ordinal, equals(1));
-      expect(month.day, equals(3));
+      expect(month.day, equals(4));
       expect(month.month, equals(11));
     });
 
@@ -279,7 +279,7 @@ void main() {
       day = order.thursday();
       month = day.december();
       expect(month.ordinal, equals(2));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(12));
     });
 
@@ -288,7 +288,7 @@ void main() {
       day = order.thursday();
       month = day.month(5);
       expect(month.ordinal, equals(2));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(5));
     });
   });
@@ -304,7 +304,7 @@ void main() {
       month = day.january();
       date = month.of(2016);
       expect(month.ordinal, equals(1));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(1));
 
       expect(date.year, equals(2016));
@@ -317,7 +317,7 @@ void main() {
       month = day.january();
       date = month.of(2016);
       expect(month.ordinal, equals(2));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(1));
 
       expect(date.year, equals(2016));
@@ -330,7 +330,7 @@ void main() {
       month = day.january();
       date = month.of(2016);
       expect(month.ordinal, equals(3));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(1));
 
       expect(date.year, equals(2016));
@@ -343,7 +343,7 @@ void main() {
       month = day.january();
       date = month.of(2016);
       expect(month.ordinal, equals(4));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(1));
 
       expect(date.year, equals(2016));
@@ -356,7 +356,7 @@ void main() {
       month = day.january();
       date = month.of(2016);
       expect(month.ordinal, equals(5));
-      expect(month.day, equals(4));
+      expect(month.day, equals(5));
       expect(month.month, equals(1));
 
       expect(date.year, equals(2016));
@@ -371,7 +371,7 @@ void main() {
 
       expect(day.ordinal, equals(2));
       expect(day.ordinal, equals(2));
-      expect(day.day, equals(4));
+      expect(day.day, equals(5));
 
       expect(date.year, equals(2016));
       expect(date.month, equals(1));
@@ -383,7 +383,7 @@ void main() {
     /**/
     /*   expect(date.year, equals(2018)); */
     /*   expect(date.month, equals(1)); */
-    /*   expect(date.day, equals(3)); */
+    /*   expect(date.day, equals(4)); */
     /* }, skip: true); */
   });
 }

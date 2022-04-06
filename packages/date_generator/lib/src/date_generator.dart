@@ -16,13 +16,13 @@ class Order {
 
   final int ordinal;
 
-  Day sunday() => Day(ordinal, 0);
-  Day monday() => Day(ordinal, 1);
-  Day tuesday() => Day(ordinal, 2);
-  Day wednesday() => Day(ordinal, 3);
-  Day thursday() => Day(ordinal, 4);
-  Day friday() => Day(ordinal, 5);
-  Day saturday() => Day(ordinal, 6);
+  Day sunday() => Day(ordinal, 1);
+  Day monday() => Day(ordinal, 2);
+  Day tuesday() => Day(ordinal, 3);
+  Day wednesday() => Day(ordinal, 4);
+  Day thursday() => Day(ordinal, 5);
+  Day friday() => Day(ordinal, 6);
+  Day saturday() => Day(ordinal, 7);
 }
 
 class Day {
@@ -61,10 +61,10 @@ class Month {
   DateTime of(int year) {
     var date = DateTime(year, month, 1);
     var days = day - date.weekday;
-    if (days < 0) {
+    if (days < 1) {
       days = 7 + days;
     }
-    date = DateTime(date.year, date.month, 1 + days + ((ordinal - 1) * 7));
+    date = DateTime(date.year, date.month, days + ((ordinal - 1) * 7));
 
     if (date.month != month) {
       date = DateTime(date.year, date.month, date.day - 7);
