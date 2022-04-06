@@ -1,16 +1,17 @@
-// TODO(joshpetit): Create .weekday(int) .month(int)
+/// Generates dates
 class Generator {
-  bool get isAwesome => true;
-
   Order first() => Order(1);
   Order second() => Order(2);
   Order third() => Order(3);
   Order fourth() => Order(4);
   Order last() => Order(5);
 
+  /// Equivalent of doing [first], [second], [third], [fourth], and [last].
+  /// 5 is equsl to last
   Order week(int weekNumber) => Order(weekNumber.clamp(1, 5));
 }
 
+/// The week number within a month.
 class Order {
   const Order(this.ordinal);
 
