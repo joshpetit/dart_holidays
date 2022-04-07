@@ -19,19 +19,19 @@ class Order {
 
   /// Equivalent of using [sunday] through [saturday]. Starts with Sunday as
   // index 1
-  Day weekDay(int weekDayNumber) => Day(ordinal, weekDayNumber.clamp(1, 7));
+  GeneratorDay weekDay(int weekDayNumber) => GeneratorDay(ordinal, weekDayNumber.clamp(1, 7));
 
-  Day get sunday => Day(ordinal, 1);
-  Day get monday => Day(ordinal, 2);
-  Day get tuesday => Day(ordinal, 3);
-  Day get wednesday => Day(ordinal, 4);
-  Day get thursday => Day(ordinal, 5);
-  Day get friday => Day(ordinal, 6);
-  Day get saturday => Day(ordinal, 7);
+  GeneratorDay get sunday => GeneratorDay(ordinal, 1);
+  GeneratorDay get monday => GeneratorDay(ordinal, 2);
+  GeneratorDay get tuesday => GeneratorDay(ordinal, 3);
+  GeneratorDay get wednesday => GeneratorDay(ordinal, 4);
+  GeneratorDay get thursday => GeneratorDay(ordinal, 5);
+  GeneratorDay get friday => GeneratorDay(ordinal, 6);
+  GeneratorDay get saturday => GeneratorDay(ordinal, 7);
 }
 
-class Day {
-  const Day(this.ordinal, this.weekday);
+class GeneratorDay {
+  const GeneratorDay(this.ordinal, this.weekday);
 
   /// Week number within the month
   final int ordinal;
@@ -40,25 +40,25 @@ class Day {
 
   /// Equivalent of using [january] through [december]. Starts with january as
   // index 1
-  Month month(int monthNumber) =>
-      Month(ordinal, weekday, monthNumber.clamp(1, 12));
+  GeneratorMonth month(int monthNumber) =>
+      GeneratorMonth(ordinal, weekday, monthNumber.clamp(1, 12));
 
-  Month get january => month(1);
-  Month get february => month(2);
-  Month get march => month(3);
-  Month get april => month(4);
-  Month get may => month(5);
-  Month get june => month(6);
-  Month get july => month(7);
-  Month get august => month(8);
-  Month get september => month(9);
-  Month get october => month(10);
-  Month get november => month(11);
-  Month get december => month(12);
+  GeneratorMonth get january => month(1);
+  GeneratorMonth get february => month(2);
+  GeneratorMonth get march => month(3);
+  GeneratorMonth get april => month(4);
+  GeneratorMonth get may => month(5);
+  GeneratorMonth get june => month(6);
+  GeneratorMonth get july => month(7);
+  GeneratorMonth get august => month(8);
+  GeneratorMonth get september => month(9);
+  GeneratorMonth get october => month(10);
+  GeneratorMonth get november => month(11);
+  GeneratorMonth get december => month(12);
 }
 
-class Month {
-  const Month(
+class GeneratorMonth {
+  const GeneratorMonth(
     this.ordinal,
     this.weekday,
     this.month,

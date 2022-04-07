@@ -39,7 +39,7 @@ void main() {
 
   group('Days created correctly', () {
     final gen = Generator();
-    Day day;
+    GeneratorDay day;
     test('That sunday created correctly', () {
       day = gen.first.sunday;
       expect(day.ordinal, equals(1));
@@ -115,7 +115,7 @@ void main() {
 
   group('Order creates the correct days', () {
     Order order;
-    Day day;
+    GeneratorDay day;
     test('That january created correctly', () {
       order = gen.first;
       day = order.sunday;
@@ -169,8 +169,8 @@ void main() {
 
   group('Months created correctly', () {
     Order order;
-    Day day;
-    Month month;
+    GeneratorDay day;
+    GeneratorMonth month;
 
     test('should have month 0 for january', () {
       order = gen.first;
@@ -294,8 +294,8 @@ void main() {
 
   group('year', () {
     Order order;
-    Day day;
-    Month month;
+    GeneratorDay day;
+    GeneratorMonth month;
     DateTime date;
     test('should have first thursday in january of 2016', () {
       order = gen.first;
