@@ -16,6 +16,7 @@ class Order {
   const Order(this.ordinal);
 
   final int ordinal;
+  Day weekDay(int weekDayNumber) => Day(ordinal, weekDayNumber.clamp(1, 7));
 
   Day get sunday => Day(ordinal, 1);
   Day get monday => Day(ordinal, 2);
@@ -32,7 +33,8 @@ class Day {
   final int ordinal;
   final int weekday;
 
-  Month month(int monthNumber) => Month(ordinal, weekday, monthNumber.clamp(1, 12));
+  Month month(int monthNumber) =>
+      Month(ordinal, weekday, monthNumber.clamp(1, 12));
 
   Month get january => month(1);
   Month get february => month(2);

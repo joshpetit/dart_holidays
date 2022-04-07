@@ -11,7 +11,11 @@ void main() {
   // Equivalents
   res = gen.last.monday.december.of(2021);
   var same = gen.week(5).monday.december.of(2021);
-  print(res.toIso8601String() == same.toIso8601String());
+  var othersame = gen.week(5).weekDay(2).december.of(2021);
+  var yetanothersame = gen.week(5).weekDay(2).month(12).of(2021);
+  print(res.toIso8601String() == same.toIso8601String() &&
+      same.toIso8601String() == othersame.toIso8601String() &&
+      othersame.toIso8601String() == yetanothersame.toIso8601String());
 
   res = gen.last.monday.december.of(2021);
   same = gen.last.monday.month(12).of(2021);
@@ -19,5 +23,9 @@ void main() {
 
   res = gen.last.monday.december.of(2021);
   same = gen.week(5).monday.month(12).of(2021);
+  print(res.toIso8601String() == same.toIso8601String());
+
+  res = gen.second.weekDay(2).december.of(2021);
+  same = gen.week(2).monday.month(12).of(2021);
   print(res.toIso8601String() == same.toIso8601String());
 }
