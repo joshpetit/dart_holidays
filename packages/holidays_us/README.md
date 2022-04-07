@@ -7,4 +7,3 @@ as `holidays.christmas(2020)`.
 `
 
 If you like this package consider following me on Instagram
-([@josh.petitma](https://instagram.com/josh.petitma)) cuz why not 🤷

@@ -58,4 +58,3 @@ the list of holidays supported by the group extending the class
 adding holidays through the `addHolidays(<String, HolidayFunction>{})` method.
 
 If you like this package consider following me on Instagram
-([@josh.petitma](https://instagram.com/josh.petitma)) cuz why not 🤷
