@@ -1,5 +1,5 @@
 name: date_generator
-description: A starting point for Dart libraries or applications.
+description: Generate dates based on their position within a month
 version: 1.0.0
 homepage: https://github.com/joshpetit/dart_holidays/tree/main/packages/date_generator
 
