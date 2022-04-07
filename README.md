@@ -4,8 +4,8 @@ Packages intended to create holidays. Also useful date generation.
 
 View on pub.dev:
 
-[date_generator](https://pub.dev/packages/date_generator)
-[holidays_us](https://pub.dev/packages/holidays_us)
+- [date_generator](https://pub.dev/packages/date_generator)
+- [holidays_us](https://pub.dev/packages/holidays_us)
 
 ## Description
 
