@@ -18,5 +18,16 @@ Also contains the `HolidayGroup` interface which is used within USHolidays
 
 [read here](packages/date_generator/README.md) for more.
 
+### Holidays US
+
+Holiday group for US holidays.
+
+```dart
+var holidays = USHolidays();
+holidays.christmas(2020);
+holidays.getHolidayGenerator('christmas')!(2020);
+```
+[read here](packages/holidays_us/README.md) for more.
+
 If you like this package consider following me on Instagram
 ([@josh.petitma](https://instagram.com/josh.petitma)) cuz why not 🤷
