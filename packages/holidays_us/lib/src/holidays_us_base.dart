@@ -1,4 +1,4 @@
-import 'package:date_generator/date_generator.dart';
+import 'package:date_generator/dart_date_generator.dart';
 import 'package:date_generator/holiday_group.dart';
 
 class USHolidays extends HolidayGroup {
