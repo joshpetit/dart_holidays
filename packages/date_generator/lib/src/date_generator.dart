@@ -16,6 +16,9 @@ class Order {
   const Order(this.ordinal);
 
   final int ordinal;
+
+  /// Equivalent of using [sunday] through [saturday]. Starts with Sunday as
+  // index 1
   Day weekDay(int weekDayNumber) => Day(ordinal, weekDayNumber.clamp(1, 7));
 
   Day get sunday => Day(ordinal, 1);
@@ -30,9 +33,13 @@ class Order {
 class Day {
   const Day(this.ordinal, this.weekday);
 
+  /// Week number within the month
   final int ordinal;
+  /// Weekday 1-7
   final int weekday;
 
+  /// Equivalent of using [january] through [december]. Starts with january as
+  // index 1
   Month month(int monthNumber) =>
       Month(ordinal, weekday, monthNumber.clamp(1, 12));
 
@@ -57,10 +64,13 @@ class Month {
     this.month,
   );
 
+  /// Weekday 1-7
   final int weekday;
+  /// Week number within the month
   final int ordinal;
   final int month;
 
+  /// Find this month within a specified year and return its [DateTime] object.
   DateTime of(int year) {
     var date = DateTime(year, month, 1);
     var days = weekday - date.weekday;
