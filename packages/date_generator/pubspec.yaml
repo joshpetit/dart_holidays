@@ -1,6 +1,6 @@
 name: date_generator
 description: A starting point for Dart libraries or applications.
-version: 1.1.0
+version: 1.0.0
 homepage: https://github.com/joshpetit/dart_holidays/tree/main/packages/date_generator
 
 environment:
