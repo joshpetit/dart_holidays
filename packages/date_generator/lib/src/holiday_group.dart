@@ -1,13 +1,16 @@
 typedef HolidayFunction = DateTime Function(int);
 
 abstract class HolidayGroup {
-  const HolidayGroup({
-    required this.holidayFunctions,
-  });
+  HolidayGroup();
+  final Map<String, HolidayFunction> _holidayFunctions = {};
 
-  final Map<String, HolidayFunction> holidayFunctions;
+  void addHolidays(Map<String, HolidayFunction> holidays) {
+    _holidayFunctions.addAll(holidays);
+  }
 
   /// Returns a function to fetch requested holiday date for particular date
   HolidayFunction? getHolidayGenerator(String holidayName) =>
-      holidayFunctions[holidayName];
+      _holidayFunctions[holidayName];
+
+  List<String> get holidayNames => _holidayFunctions.keys.toList();
 }

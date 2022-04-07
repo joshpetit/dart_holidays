@@ -1,12 +1,22 @@
 import 'package:date_generator/holiday_group.dart';
 
 class MyHolidays extends HolidayGroup {
-  MyHolidays()
-      : super(
-          holidayFunctions: {
-            'myBirthday': myBirthday,
-          },
-        );
+  MyHolidays() {
+    addHolidays({'myBirthday': myBirthday});
+  }
 
-  static DateTime myBirthday(int year) => DateTime(year, 8, 18);
+  DateTime myBirthday(int year) => DateTime(year, 8, 18);
+}
+
+void main() {
+  var holidays = MyHolidays();
+
+  print(holidays.holidayNames);
+  // [myBirthday]
+
+  print(holidays.myBirthday(2020));
+  // August 18 2020
+
+  print(holidays.getHolidayGenerator('myBirthday'));
+  // Closure
 }
