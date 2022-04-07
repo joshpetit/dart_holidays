@@ -36,3 +36,8 @@ holidays.getHolidayGenerator('christmas')!(2020);
 
 If you like this package consider following me on Instagram
 ([@josh.petitma](https://instagram.com/josh.petitma)) cuz why not 🤷
+
+## Credits
+
+This is a port of a package in node with a few modifications to work for dart
+and extra convenience methods. See the inspiration [here](https://github.com/elidoran/node-date-generator).
