@@ -19,14 +19,14 @@ as `holidays.christmas(2020)`.
 - Easter
 - Thanksgiving
 - Independence Day
-- Valentines Day
+- Valentine's Day
 - Christmas
-- New Years Day
+- New Year's Day
 - Halloween
 - Columbus Day
 - Labor Day
-- Fathers Day
-- Mothers Day
+- Father's Day
+- Mother's Day
 - Memorial Day
-- Presidents Day
+- President's Day
 - Martin Luther King Day
