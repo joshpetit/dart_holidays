@@ -1,3 +1,5 @@
+## 1.0.3
+- Add easter
 ## 1.0.2
 - Make it work
 ## 1.0.1
