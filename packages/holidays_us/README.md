@@ -13,3 +13,20 @@ A list of US holidays. You can get a holiday year generator by using the
 holiday method. For example `holidays.getHolidayGenerator('christmas')(2020)` is the same
 as `holidays.christmas(2020)`.
 `
+
+### Holiays available:
+
+- Easter
+- Thanksgiving
+- Independence Day
+- Valentines Day
+- Christmas
+- New Years Day
+- Halloween
+- Columbus Day
+- Labor Day
+- Fathers Day
+- Mothers Day
+- Memorial Day
+- Presidents Day
+- Martin Luther King Day
