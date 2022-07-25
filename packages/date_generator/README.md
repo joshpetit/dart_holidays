@@ -1,8 +1,20 @@
 # Date Generator
 
-Generate dates based on the position within a month
+View on [pub.dev](https://pub.dev/packages/date_generator)
+
+Generate dates based on the position within a month (ordinal dates)
+
+You can install this using `flutter pub add date_generator`.
 
 ## Generating Dates
+
+As an example, to find the second Sunday in May you would do:
+
+```dart
+Generator().second.sunday.may.of(2020);
+```
+
+And it would return the corresponding `DateTime` object for that day.
 
 You start off with the ordinal which is the week within the month
 
